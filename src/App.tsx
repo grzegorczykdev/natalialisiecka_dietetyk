@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ScrollToTopOnRouteChange from "@/components/ScrollToTopOnRouteChange";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -15,6 +15,8 @@ import Downloads from "./pages/Downloads";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+// React Router basename should not end with a trailing slash; trim it from Vite's BASE_URL
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -22,7 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       {/* basename ensures routes work when the app is served from a sub-path (e.g. GitHub Pages) */}
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter basename={basename}>
         <ScrollToTopOnRouteChange />
         <Routes>
           <Route path="/" element={<Index />} />
