@@ -11,41 +11,41 @@ import wellnessLifestyle from "@/assets/wellness-lifestyle.jpg";
 const Services = () => {
     const services = [
         {
-            title: "Initial Consultation",
-            duration: "60 minutes",
-            price: "$150",
-            description: "Comprehensive assessment of your health history, dietary habits, and goals.",
+            title: "Konsultacja wstępna",
+            duration: "60 minut",
+            price: "600 zł",
+            description: "Kompleksowa ocena Twojej historii zdrowotnej, nawyków żywieniowych i celów.",
             features: [
-                "Complete nutrition assessment",
-                "Goal setting and action plan",
-                "Personalized meal planning guidance",
-                "Educational materials and resources",
+                "Kompleksowa ocena żywieniowa",
+                "Ustalenie celów i plan działania",
+                "Spersonalizowane wskazówki dotyczące planowania posiłków",
+                "Materiały edukacyjne i zasoby",
             ],
             icon: Calendar,
         },
         {
-            title: "Follow-Up Session",
-            duration: "30 minutes",
-            price: "$75",
-            description: "Regular check-ins to monitor progress and adjust your plan as needed.",
+            title: "Sesja kontrolna",
+            duration: "30 minut",
+            price: "300 zł",
+            description: "Regularne kontrole w celu monitorowania postępów i dostosowania planu w razie potrzeby.",
             features: [
-                "Progress review and celebration",
-                "Plan adjustments and refinements",
-                "Q&A and problem-solving",
-                "Ongoing support and motivation",
+                "Przegląd postępów i świętowanie",
+                "Dostosowania i ulepszenia planu",
+                "Pytania i odpowiedzi oraz rozwiązywanie problemów",
+                "Ciągłe wsparcie i motywacja",
             ],
             icon: MessageCircle,
         },
         {
-            title: "Personalized Meal Plan",
-            duration: "Delivered within 5 days",
-            price: "$200",
-            description: "Custom meal plan designed for your specific needs and preferences.",
+            title: "Spersonalizowany plan posiłków",
+            duration: "Dostarczany w ciągu 5 dni",
+            price: "800 zł",
+            description: "Indywidualny plan posiłków zaprojektowany dla Twoich konkretnych potrzeb i preferencji.",
             features: [
-                "1-week detailed meal plan",
-                "Recipe suggestions and shopping lists",
-                "Nutritional breakdowns",
-                "Substitution options for flexibility",
+                "Szczegółowy plan posiłków na 1 tydzień",
+                "Sugestie przepisów i listy zakupów",
+                "Rozkład wartości odżywczych",
+                "Opcje zamienników dla elastyczności",
             ],
             icon: FileText,
         },
@@ -53,42 +53,42 @@ const Services = () => {
 
     const programs = [
         {
-            title: "Weight Management Program",
-            duration: "3 months",
-            price: "$600",
-            description: "Comprehensive program for sustainable weight loss or gain.",
+            title: "Program zarządzania wagą",
+            duration: "3 miesiące",
+            price: "2400 zł",
+            description: "Kompleksowy program dla zrównoważonej utraty lub przyrostu wagi.",
             features: [
-                "Initial 60-min consultation",
-                "6 follow-up sessions",
-                "Weekly check-ins via email",
-                "Custom meal plans",
-                "Progress tracking tools",
+                "Konsultacja wstępna 60-min",
+                "6 sesji kontrolnych",
+                "Cotygodniowe kontrole przez e-mail",
+                "Indywidualne plany posiłków",
+                "Narzędzia do śledzenia postępów",
             ],
         },
         {
-            title: "Sports Nutrition Package",
-            duration: "2 months",
-            price: "$500",
-            description: "Optimize performance and recovery through targeted nutrition.",
+            title: "Pakiet żywienia sportowego",
+            duration: "2 miesiące",
+            price: "2000 zł",
+            description: "Optymalizuj wydolność i regenerację poprzez ukierunkowane żywienie.",
             features: [
-                "Performance assessment",
-                "5 follow-up sessions",
-                "Training-specific meal plans",
-                "Supplementation guidance",
-                "Race/competition preparation",
+                "Ocena wydolności",
+                "5 sesji kontrolnych",
+                "Plany posiłków dostosowane do treningu",
+                "Wskazówki dotyczące suplementacji",
+                "Przygotowanie do zawodów/konkurencji",
             ],
         },
         {
-            title: "Wellness Reset",
-            duration: "6 weeks",
-            price: "$400",
-            description: "Reset your relationship with food and establish healthy habits.",
+            title: "Reset zdrowia",
+            duration: "6 tygodni",
+            price: "1600 zł",
+            description: "Zresetuj swoją relację z jedzeniem i wprowadź zdrowe nawyki.",
             features: [
-                "Initial assessment",
-                "4 follow-up sessions",
-                "Habit-building strategies",
-                "Mindful eating guidance",
-                "Recipe collection",
+                "Ocena wstępna",
+                "4 sesje kontrolne",
+                "Strategie budowania nawyków",
+                "Wskazówki dotyczące uważnego jedzenia",
+                "Kolekcja przepisów",
             ],
         },
     ];
@@ -101,16 +101,16 @@ const Services = () => {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto text-center mb-16 fade-in">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Nutrition Services
+              Usługi żywieniowe
                         </h1>
                         <p className="text-xl text-muted-foreground">
-              Personalized nutrition counseling tailored to your unique needs and goals
+              Spersonalizowane poradnictwo żywieniowe dostosowane do Twoich unikalnych potrzeb i celów
                         </p>
                     </div>
 
                     <div className="mb-24">
                         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-              Individual Sessions
+              Sesje indywidualne
                         </h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             {services.map((service, index) => (
@@ -162,17 +162,17 @@ const Services = () => {
                     <div className="relative h-[300px] lg:h-[400px] rounded-3xl overflow-hidden shadow-2xl mb-24">
                         <img
                             src={mealPrep}
-                            alt="Healthy meal preparation"
+                            alt="Przygotowanie zdrowego posiłku"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-wellness-dark/70 to-transparent flex items-center">
                             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                                 <div className="max-w-lg text-white">
                                     <h3 className="text-3xl sm:text-4xl font-bold mb-4">
-                    Not sure which service is right for you?
+                    Nie jesteś pewien, która usługa jest dla Ciebie odpowiednia?
                                     </h3>
                                     <p className="text-lg mb-6 opacity-90">
-                    Book a free 15-minute discovery call to discuss your goals and find the best fit.
+                    Umów się na darmową 15-minutową rozmowę, aby omówić swoje cele i znaleźć najlepsze dopasowanie.
                                     </p>
                                     <Button
                                         asChild
@@ -180,7 +180,7 @@ const Services = () => {
                                         variant="secondary"
                                         className="rounded-full"
                                     >
-                                        <Link to="/contact">Schedule Free Call</Link>
+                                        <Link to="/contact">Umów darmową rozmowę</Link>
                                     </Button>
                                 </div>
                             </div>
@@ -189,10 +189,10 @@ const Services = () => {
 
                     <div className="mb-24">
                         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
-              Comprehensive Programs
+              Kompleksowe programy
                         </h2>
                         <p className="text-center text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Multi-session packages designed to provide ongoing support and accountability for lasting results
+              Pakiety wielosesyjne zaprojektowane, aby zapewnić ciągłe wsparcie i odpowiedzialność dla trwałych rezultatów
                         </p>
                         <div className="grid md:grid-cols-3 gap-8">
                             {programs.map((program, index) => (
@@ -230,7 +230,7 @@ const Services = () => {
                                             className="w-full border-2 rounded-full"
                                         >
                                             <Link to="/contact">
-                        Get Started <ArrowRight className="ml-2" size={16} />
+                        Zacznij <ArrowRight className="ml-2" size={16} />
                                             </Link>
                                         </Button>
                                     </CardContent>
@@ -242,16 +242,16 @@ const Services = () => {
                     <div className="relative h-[300px] lg:h-[400px] rounded-3xl overflow-hidden shadow-2xl">
                         <img
                             src={wellnessLifestyle}
-                            alt="Wellness lifestyle"
+                            alt="Zdrowy styl życia"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-wellness-dark/50 flex items-center justify-center">
                             <div className="text-center text-white px-4">
                                 <h3 className="text-3xl sm:text-4xl font-bold mb-4">
-                  Ready to Start Your Journey?
+                  Gotowy na rozpoczęcie swojej podróży?
                                 </h3>
                                 <p className="text-lg mb-6 opacity-90 max-w-2xl">
-                  Let's work together to create a personalized nutrition plan that fits your life
+                  Pracujmy razem, aby stworzyć spersonalizowany plan żywieniowy, który pasuje do Twojego życia
                                 </p>
                                 <Button
                                     asChild
@@ -260,7 +260,7 @@ const Services = () => {
                                     className="rounded-full px-8"
                                 >
                                     <Link to="/contact">
-                    Contact Me <ArrowRight className="ml-2" size={20} />
+                    Skontaktuj się ze mną <ArrowRight className="ml-2" size={20} />
                                     </Link>
                                 </Button>
                             </div>

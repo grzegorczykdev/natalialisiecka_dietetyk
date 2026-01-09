@@ -67,7 +67,7 @@ const Contact = () => {
                         <Mail className="text-primary" size={20} />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">Email</h3>
+                        <h3 className="font-semibold mb-1">E-mail</h3>
                         <a
                           href="mailto:hello@nutribalance.com"
                           className="text-muted-foreground hover:text-primary transition-colors"

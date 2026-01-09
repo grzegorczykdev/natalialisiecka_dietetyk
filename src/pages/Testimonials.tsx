@@ -8,46 +8,46 @@ import ScrollToTop from "@/components/ScrollToTop";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Emily Johnson",
-      role: "Weight Loss Client",
-      initials: "EJ",
+      name: "Anna Kowalska",
+      role: "Klientka - redukcja wagi",
+      initials: "AK",
       rating: 5,
-      text: "Working with Sarah has been life-changing. She helped me lose 30 pounds without feeling deprived or restricted. Her personalized meal plans fit perfectly into my busy schedule, and I've learned so much about nutrition. I finally have a healthy relationship with food!",
+      text: "Praca z Natalią zmieniła moje życie. Pomogła mi schudnąć 15 kg bez poczucia pozbawienia czy ograniczeń. Jej spersonalizowane plany posiłków idealnie pasują do mojego zabieganego harmonogramu, a ja nauczyłam się tak wiele o żywieniu. Wreszcie mam zdrową relację z jedzeniem!",
     },
     {
-      name: "Michael Chen",
-      role: "Athletic Performance",
-      initials: "MC",
+      name: "Michał Nowak",
+      role: "Wydolność sportowa",
+      initials: "MN",
       rating: 5,
-      text: "As a competitive runner, I needed expert guidance on fueling my training. Sarah's sports nutrition expertise helped me improve my performance and recovery. My race times have improved, and I feel stronger than ever. Highly recommend!",
+      text: "Jako biegacz wyczynowy potrzebowałem eksperckiego wsparcia w zakresie żywienia treningowego. Ekspertyza Natalii w zakresie żywienia sportowego pomogła mi poprawić wydolność i regenerację. Moje czasy w zawodach się poprawiły i czuję się silniejszy niż kiedykolwiek. Gorąco polecam!",
     },
     {
-      name: "Lisa Martinez",
-      role: "Diabetes Management",
-      initials: "LM",
+      name: "Magdalena Wiśniewska",
+      role: "Zarządzanie cukrzycą",
+      initials: "MW",
       rating: 5,
-      text: "Sarah's knowledge of diabetes management is outstanding. She helped me understand how different foods affect my blood sugar and created meal plans that are both delicious and effective. My A1C has improved significantly, and I feel more in control of my health.",
+      text: "Wiedza Natalii na temat zarządzania cukrzycą jest wybitna. Pomogła mi zrozumieć, jak różne pokarmy wpływają na poziom cukru we krwi i stworzyła plany posiłków, które są zarówno smaczne, jak i skuteczne. Mój poziom HbA1c znacznie się poprawił i czuję się bardziej kontrolować swoje zdrowie.",
     },
     {
-      name: "David Thompson",
-      role: "Overall Wellness",
-      initials: "DT",
+      name: "Tomasz Zieliński",
+      role: "Ogólne zdrowie",
+      initials: "TZ",
       rating: 5,
-      text: "I came to Sarah feeling overwhelmed by all the conflicting nutrition advice out there. She cut through the noise and gave me practical, science-based recommendations. My energy levels have skyrocketed, and I've never felt better. She truly cares about her clients' success.",
+      text: "Przyszedłem do Natalii przytłoczony wszystkimi sprzecznymi poradami żywieniowymi. Przecięła przez ten szum i dała mi praktyczne, oparte na nauce rekomendacje. Moje poziomy energii wzrosły, a ja nigdy nie czułem się lepiej. Naprawdę troszczy się o sukces swoich klientów.",
     },
     {
-      name: "Jennifer Williams",
-      role: "Prenatal Nutrition",
-      initials: "JW",
+      name: "Katarzyna Lewandowska",
+      role: "Żywienie prenatalne",
+      initials: "KL",
       rating: 5,
-      text: "Sarah supported me through my pregnancy with expert nutrition guidance. She addressed all my concerns and helped me maintain a healthy diet for both me and my baby. I felt confident and well-nourished throughout my pregnancy. Thank you, Sarah!",
+      text: "Natalia wspierała mnie przez moją ciążę eksperckim poradnictwem żywieniowym. Odpowiedziała na wszystkie moje obawy i pomogła mi utrzymać zdrową dietę zarówno dla mnie, jak i mojego dziecka. Czułam się pewnie i dobrze odżywiona przez całą ciążę. Dziękuję, Natalio!",
     },
     {
-      name: "Robert Anderson",
-      role: "Heart Health",
-      initials: "RA",
+      name: "Piotr Szymański",
+      role: "Zdrowie serca",
+      initials: "PS",
       rating: 5,
-      text: "After my heart health scare, Sarah helped me completely transform my diet. Her meal plans are delicious and heart-healthy. My cholesterol levels have improved dramatically, and I've lost weight without feeling hungry. She's amazing at what she does!",
+      text: "Po moim problemie z sercem Natalia pomogła mi całkowicie przekształcić moją dietę. Jej plany posiłków są smaczne i zdrowe dla serca. Moje poziomy cholesterolu poprawiły się dramatycznie i schudłem bez poczucia głodu. Jest niesamowita w tym, co robi!",
     },
   ];
 
@@ -59,20 +59,20 @@ const Testimonials = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16 fade-in">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Client Success Stories
+              Historie sukcesu klientów
             </h1>
             <p className="text-xl text-muted-foreground">
-              Real results from real people who transformed their health through personalized nutrition
+              Prawdziwe rezultaty od prawdziwych ludzi, którzy przekształcili swoje zdrowie dzięki spersonalizowanemu żywieniu
             </p>
           </div>
 
           <div className="mb-16 bg-wellness-beige rounded-3xl p-8 lg:p-12 text-center">
             <Quote className="text-primary mx-auto mb-6" size={48} />
             <blockquote className="text-2xl sm:text-3xl font-bold mb-4 text-balance max-w-3xl mx-auto">
-              "Sarah's approach to nutrition is refreshing, practical, and truly effective. She doesn't just tell you what to eat—she empowers you to make lasting changes."
+              "Podejście Natalii do żywienia jest odświeżające, praktyczne i naprawdę skuteczne. Nie mówi Ci tylko, co jeść—wzmacnia Cię, aby wprowadzić trwałe zmiany."
             </blockquote>
             <p className="text-lg text-muted-foreground">
-              — Over 500+ clients transformed
+              — Ponad 500+ przekształconych klientów
             </p>
           </div>
 
@@ -119,31 +119,31 @@ const Testimonials = () => {
             <Card className="border-none shadow-lg bg-wellness-sage-light text-center">
               <CardContent className="pt-8 pb-8">
                 <div className="text-5xl font-bold text-primary mb-2">500+</div>
-                <p className="text-muted-foreground">Clients Served</p>
+                <p className="text-muted-foreground">Obsłużonych klientów</p>
               </CardContent>
             </Card>
 
             <Card className="border-none shadow-lg bg-wellness-peach text-center">
               <CardContent className="pt-8 pb-8">
                 <div className="text-5xl font-bold text-foreground mb-2">95%</div>
-                <p className="text-muted-foreground">Client Satisfaction</p>
+                <p className="text-muted-foreground">Satysfakcja klientów</p>
               </CardContent>
             </Card>
 
             <Card className="border-none shadow-lg bg-wellness-sage-light text-center">
               <CardContent className="pt-8 pb-8">
                 <div className="text-5xl font-bold text-primary mb-2">10+</div>
-                <p className="text-muted-foreground">Years Experience</p>
+                <p className="text-muted-foreground">Lat doświadczenia</p>
               </CardContent>
             </Card>
           </div>
 
           <div className="bg-gradient-to-br from-wellness-sage-light via-wellness-cream to-wellness-peach rounded-3xl p-8 lg:p-12 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Ready to Write Your Success Story?
+              Gotowy napisać swoją historię sukcesu?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have transformed their health with personalized nutrition guidance
+              Dołącz do setek zadowolonych klientów, którzy przekształcili swoje zdrowie dzięki spersonalizowanemu poradnictwu żywieniowemu
             </p>
           </div>
         </div>
