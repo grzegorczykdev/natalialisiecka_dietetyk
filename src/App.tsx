@@ -21,7 +21,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/* basename ensures routes work when the app is served from a sub-path (e.g. GitHub Pages) */}
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <ScrollToTopOnRouteChange />
         <Routes>
           <Route path="/" element={<Index />} />
