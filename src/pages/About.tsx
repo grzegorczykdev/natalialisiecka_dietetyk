@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import {
   Award,
   BookOpen,
@@ -7,14 +8,54 @@ import {
   User,
   Leaf,
   HandHeart,
+  X,
 } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import aboutImage from "@/assets/hero-image.jpg";
+import certificateImage from "@/assets/dyplom.jpg";
 
 const About = () => {
+  const [selectedCertificate, setSelectedCertificate] = useState<string | null>(
+    null
+  );
+  const [isModalClosing, setIsModalClosing] = useState(false);
+  const closeTimer = useRef<number | null>(null);
+  const certificateImages = Array(10).fill(certificateImage);
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+  });
+
+  const openCertificate = (image: string) => {
+    if (closeTimer.current) {
+      window.clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+    setIsModalClosing(false);
+    setSelectedCertificate(image);
+  };
+
+  const closeCertificate = () => {
+    setIsModalClosing(true);
+    closeTimer.current = window.setTimeout(() => {
+      setSelectedCertificate(null);
+      setIsModalClosing(false);
+      closeTimer.current = null;
+    }, 180);
+  };
+
+  const handleNext = () => {
+    emblaApi?.scrollNext();
+  };
+
+  const handlePrev = () => {
+    emblaApi?.scrollPrev();
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -205,8 +246,104 @@ const About = () => {
               żywieniową, która szanuje jego unikalną podróż.
             </p>
           </div>
+
+          <div className="mt-12 bg-card/80 border border-border/50 rounded-3xl p-6 lg:p-10 shadow-xl backdrop-blur-sm">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <h3 className="text-3xl sm:text-4xl font-bold mb-2">
+                  Certyfikaty i dyplomy
+                </h3>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="flex justify-end gap-3 mb-4">
+                <button
+                  type="button"
+                  aria-label="Poprzedni certyfikat"
+                  onClick={handlePrev}
+                  className="h-11 w-11 rounded-full border border-border bg-background text-foreground hover:bg-muted transition hover:-translate-y-0.5 shadow-sm flex items-center justify-center"
+                >
+                  <span className="sr-only">Poprzedni</span>
+                  <div className="rotate-180">&#10140;</div>
+                </button>
+                <button
+                  type="button"
+                  aria-label="Następny certyfikat"
+                  onClick={handleNext}
+                  className="h-11 w-11 rounded-full border border-border bg-background text-foreground hover:bg-muted transition hover:-translate-y-0.5 shadow-sm flex items-center justify-center"
+                >
+                  <span className="sr-only">Następny</span>
+                  <div>&#10140;</div>
+                </button>
+              </div>
+
+              <div ref={emblaRef} className="overflow-hidden">
+                <div className="flex gap-6">
+                  {certificateImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className="group relative aspect-[2/3] rounded-2xl border border-border/60 bg-gradient-to-br from-wellness-cream via-background to-wellness-sage-light/40 shadow-lg overflow-hidden cursor-pointer transition-transform hover:-translate-y-1"
+                      style={{
+                        minWidth: "clamp(160px, 18vw, 214px)",
+                        flex: "0 0 clamp(160px, 18vw, 214px)",
+                      }}
+                      onClick={() => openCertificate(image)}
+                    >
+                      <img
+                        src={image}
+                        alt={`Certyfikat ${index + 1}`}
+                        className="h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                        <div className="w-full bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white px-4 pb-3 pt-6 text-sm font-semibold">
+                          Dokument {index + 1}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
+
+      {selectedCertificate && (
+        <div
+          className={`fixed inset-0 z-50 bg-black/60 backdrop-blur-[1px] flex items-center justify-center px-4 transition-opacity ${
+            isModalClosing
+              ? "opacity-0 duration-100 ease-in"
+              : "opacity-100 duration-150 ease-out"
+          }`}
+          onClick={closeCertificate}
+        >
+          <div
+            className={`relative inline-flex max-w-[90vw] max-h-[90vh] transition-[transform,opacity] ${
+              isModalClosing
+                ? "opacity-0 scale-95 translate-y-1 duration-100 ease-in"
+                : "opacity-100 scale-100 translate-y-0 duration-150 ease-out"
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              aria-label="Zamknij podgląd certyfikatu"
+              onClick={closeCertificate}
+              className="absolute -top-12 right-0 h-10 w-10 rounded-full bg-white/90 text-foreground shadow-lg border border-border hover:bg-white transition"
+            >
+              <X className="mx-auto" size={18} />
+            </button>
+            <div className="overflow-hidden">
+              <img
+                src={selectedCertificate}
+                alt="Podgląd certyfikatu"
+                className="w-auto h-auto max-w-full max-h-[85vh] object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
 
